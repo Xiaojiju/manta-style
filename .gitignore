@@ -1,0 +1,4 @@
+# Project exclude paths
+/manta-auth/target/
+/manta-gateway/target/
+/manta-services/manta-system/target/

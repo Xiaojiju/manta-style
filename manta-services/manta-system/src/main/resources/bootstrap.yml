@@ -1,0 +1,17 @@
+# tomcat
+server:
+  port: 8888
+# spring config
+spring:
+  application:
+    name: manta-system
+  cloud:
+    nacos:
+      username: nacos
+      password: duanfa00Andfuck
+      discovery:
+        server-addr: 175.24.185.242:8848
+      config:
+        server-addr: 175.24.185.242:8848
+        file-extension: yml
+

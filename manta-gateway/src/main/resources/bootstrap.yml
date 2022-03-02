@@ -1,0 +1,46 @@
+# tomcat
+server:
+  port: 8011
+# spring config
+spring:
+  application:
+    name: manta-gateway
+  cloud:
+    nacos:
+      username: nacos
+      password: duanfa00Andfuck
+      discovery:
+        server-addr: 175.24.185.242:8848
+      config:
+        server-addr: 175.24.185.242:8848
+        file-extension: yml
+    gateway:
+      enabled: true
+      discovery:
+        locator:
+          enabled: true  #开启根据微服务名称自动转发
+          lower-case-service-id: true  #微服务名称以小写形式呈现
+      routes:
+        - id: manta-system
+          uri: lb://manta-system
+          predicates:
+            - Path=/api/system/**
+          filters:
+            - StripPrefix=1
+        - id: manta-auth
+          uri: http://localhost:8010
+          predicates:
+            - Path=/auth/**
+    sentinel:
+      filter:
+        enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+

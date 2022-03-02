@@ -1,0 +1,14 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: manta-auth
+  cloud:
+    nacos:
+      username: nacos
+      password: duanfa00Andfuck
+      discovery:
+        server-addr: 175.24.185.242:8848
+      config:
+        server-addr: 175.24.185.242:8848
+        file-extension: yml
