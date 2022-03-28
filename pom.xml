@@ -8,6 +8,7 @@
     <artifactId>manta-style</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-black</version>
+    <description>manta style (幻影斧：DOTA2中的装备，可以主动产生两个分身)</description>
     <modules>
         <module>manta-gateway</module>
         <module>manta-common</module>
